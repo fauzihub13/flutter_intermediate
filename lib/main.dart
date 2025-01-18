@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mastering_flutter/navigation-routing/education_page.dart';
 import 'package:mastering_flutter/navigation-routing/first_page.dart';
+import 'package:mastering_flutter/navigation-routing/introduction_page.dart';
 import 'package:mastering_flutter/navigation-routing/second_page.dart';
 
 void main() {
@@ -23,6 +25,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const FirstPage(),
         '/second': (context) => const SecondPage(),
+        '/introduction': (context) => const IntroductionPage(),
+        '/education': (context) => const EducationPage(),
       },
     );
   }

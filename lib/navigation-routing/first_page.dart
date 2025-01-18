@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mastering_flutter/navigation-routing/second_page.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -14,7 +13,7 @@ class _FirstPageState extends State<FirstPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Navigation'),
+        title: const Text('Home Page'),
       ),
       body: Center(
         child: Column(
@@ -24,11 +23,12 @@ class _FirstPageState extends State<FirstPage> {
             const Text('First Page'),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context, rootNavigator: true).pushNamed('/second');
+                  Navigator.of(context, rootNavigator: true)
+                      .pushNamed('/second');
 
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-                    return const SecondPage();
-                  }));
+                  // Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  //   return const SecondPage();
+                  // }));
 
                   // Navigator.push(context, MaterialPageRoute(builder: (_) {
                   //   return const SecondPage();

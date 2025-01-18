@@ -13,7 +13,7 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Navigation'),
+        title: const Text('Second Page'),
         automaticallyImplyLeading: false,
       ),
       body: Center(
@@ -21,13 +21,29 @@ class _SecondPageState extends State<SecondPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text('Second Page'),
+            const Text('Nama saya Radit'),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/introduction');
+                },
+                child: const Text('Lihat perkenalan')),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text('Pendidikan'),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/education');
+                },
+                child: const Text('Lihat Pendidikan')),
+            const SizedBox(
+              height: 10,
+            ),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pop();
-                  // Navigator.pop(context);
                 },
-                child: const Text('Back to First Page'))
+                child: const Text('Kembali ke halaman pertama')),
           ],
         ),
       ),
